@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trade Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='trade.css') }}">
+  <!-- Choices.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+</head>
+<body>
+<h1>Enter Trading Preferences</h1>
+<div class="overlay">
+  <form class="form-container" method="POST" action="/results">
+    <div class="form-column">
+      <label>Long Entry:</label>
+      <input type="text" name="long_entry" required placeholder="Enter long entry condition">
+
+      <label>Long Exit:</label>
+      <input type="text" name="long_exit" required placeholder="Enter long exit condition">
+
+      <label>Short Entry:</label>
+      <input type="text" name="short_entry" required placeholder="Enter short entry condition">
+
+      <label>Short Exit:</label>
+      <input type="text" name="short_exit" required placeholder="Enter short exit condition">
+
+      <label>Select Stocks:</label>
+      <select id="stockSelect" name="stocks" multiple required>
+        <option value="TCS">TCS</option>
+        <option value="Infosys">Infosys</option>
+        <option value="TVS Motors">TVS Motors</option>
+        <option value="Bajaj Auto">Bajaj Auto</option>
+        <option value="Eicher Motors">Eicher Motors</option>
+        <option value="Hero Motocorp">Hero Motocorp</option>
+      </select>
+    </div>
+
+    <div class="form-column">
+      <label>Asset (capital ₹):</label>
+      <input type="number" name="asset" required placeholder="Total available capital in ₹">
+
+      <label>Target (%):</label>
+      <input type="number" name="target" required placeholder="e.g. 5 for 5%">
+
+      <label>Commission (₹):</label>
+      <input type="number" name="commission" required placeholder="Commission per trade in ₹">
+
+      <label>Initial Investment (₹):</label>
+      <input type="number" name="initial_investment" required placeholder="Initial amount to invest in ₹">
+
+      <label>Time Frame (days):</label>
+      <input type="number" name="time_frame" required placeholder="Number of days to simulate">
+    </div>
+
+    <div class="form-button">
+      <button type="submit">Simulate Strategy</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- Choices.js JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<script>
+  const stockSelect = document.getElementById('stockSelect');
+  const choices = new Choices(stockSelect, {
+    removeItemButton: true,
+    placeholderValue: 'Select Stocks',
+    searchEnabled: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantEdge</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+<body>
+
+  <header>
+    <div class="logo">Quant Edge</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon">&#9776;</div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-left">
+      <img src="{{ url_for('static', filename='logo.jpg') }}" alt="QuantEdge Logo">
+    </div>
+    <div class="hero-right">
+      <h1>WELCOME TO QUANTEDGE</h1>
+      <p>Your edge to trade</p>
+      <button>Explore Now</button>
+    </div>
+  </main>
+
+</body>
+</html>

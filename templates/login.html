@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+  <div id="containerforall">
+    <div id="imgcontainer">
+     <img src="{{ url_for('static', filename='logo.jpg') }}" alt="QuantEdge Logo">
+    </div>
+    <div id="formcontainer">
+      <h2 id="heading">Login</h2>
+       <form method="POST" action="/login">
+    <h3>Email:</h3>
+    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+    <h3>Password:</h3>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+    <button type="submit" id="login">Login</button>
+<br>
+
+        <a href="#" id="forgot">Forgot password?</a>
+        <br>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
+
+
