@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+}
+
+#containerforall {
+    display: flex;
+    height: 100vh; 
+    gap: 10px;
+}
+
+
+
+#imgcontainer {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+}
+
+.custom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+#formcontainer {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100vh; 
+    align-items: center; 
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
+}
+
+#heading{
+    text-align: center;
+    color: whitesmoke;
+    font-optical-sizing: auto;
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 30px; 
+} 
+
+form {
+    width: 500px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+input[type="text"],input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+button{
+    color: white;
+    background-color: #4CAF50;  
+    border-color: #4CAF50;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;  
+}
+
+
+h3{
+    color: whitesmoke;
+    font-size: 20px;  
+} 
+
+#forgot {
+    display: block;
+    margin-top: 12px;
+    color: #3b82f6;
+    text-emphasis: bold;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.2s ease;
+}
+
+#forgot:hover {
+    text-decoration: underline;
+    color: #60a5fa;
+}

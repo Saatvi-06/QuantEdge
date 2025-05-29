@@ -1,0 +1,135 @@
+/* Reset default margins and prevent scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d132b;
+  color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: -1px;
+}
+
+/* Choices.js custom theming */
+.choices {
+  background-color: #1f233e;
+  color: #ffffff;
+}
+
+.choices__inner {
+  background-color: #1f233e;
+  color: #ffffff;
+  border: 1px solid #3941a9;
+}
+
+.choices__list--dropdown {
+  background-color: #1f233e;
+  color: #ffffff;
+  border: 1px solid #3941a9;
+}
+
+.choices__list--dropdown .choices__item {
+  background-color: #1f233e;
+  color: #ffffff;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #3941a9;
+  color: white;
+}
+
+.choices__list--multiple .choices__item {
+  background-color: #3941a9;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+/* Overlay background */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+}
+
+/* Optional scrollable wrapper if needed for small screens */
+.form-container-wrapper {
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main form container */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #1c1f3a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* Column layout for form fields */
+.form-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input & select elements */
+input, select {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #262a49;
+  color: #fafafd;
+  border: 1px solid #3941a9;
+  border-radius: 6px;
+}
+
+/* Multi-select height */
+select[multiple] {
+  min-height: 120px;
+  overflow-y: auto;
+}
+
+/* Button styling */
+.form-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
